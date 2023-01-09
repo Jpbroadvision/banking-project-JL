@@ -1,0 +1,24 @@
+Online Banking
+Online Banking has changed the way banks usually function. It bought most of the time-consuming procedures like money transfer, RTGS, NEFT to account holders' fingertips. Most of the national and multinational banks use internet banking these days.
+
+Experience details in one such project added to your resume would get a positive impact on your profile.
+
+Link to the Source code for the Online Banking Project
+
+Online Banking System is a model - Banking Site. This site helps customers to perform bank transactions through a phone or laptop. The project would be performing the following operations.
+
+Home page of the Online Banking site
+Creation of the new accounts
+Login, Logout
+Manage Profile and Password
+View the balance of the account
+Deposit the amount 
+Withdraw amount 
+Transfer the amount 
+Close account
+
+#################################################################################################
+
+1. Create new accouunt || Login to old account
+
+2. Login should be able to manage forgot password
