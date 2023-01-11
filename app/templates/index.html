@@ -5,12 +5,13 @@
 {% endblock %}
 
 {% block navbar %} 
-<!-- Image and text -->
+<!-- Navbar -->
+    <!-- Image and text --> 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">
-      <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
-      Peripheral Bank
+    <a class="navbar-brand" href="{{url_for(index.html)}}">
+      <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">PeriBank
     </a>
+    <!-- Menu section -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,10 +32,149 @@
       </ul>
     </div>
 </nav>
-
+<!-- Navbar end -->
 {% endblock%}
 
 {% block body %} 
-<h1>Welcome to Peri Bank</h1>
-<h3>The bank of the future!</h3>
+<!-- start banner section -->
+<div id="top_section" class=" banner_main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row d_flex">
+                    <div class="col-md-6">
+                        <div class="con_img">
+                            <figure><img class="img_responsive" src="static/images/top_img.png" alt="#" /></figure>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bluid">
+                            <h1>Welcome<br> To Peripheral Bank</h1>
+                            <p>The bank of the future!</p>
+                            <a class="read_more" href="Javascript:void(0)">New Account </a><a class="read_more" href="Javascript:void(0)">Customer Login </a>
+                        </div>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end banner section -->
+
+<!-- about -->
+<div id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about_border">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="titlepage text_align_left">
+                                <h2>About Us</h2>
+                            </div>
+                            <div class="about_text">
+                                <p>It is a long established fact that a reader will be distracted by It is a long established fact that a reader will be distracted by
+                                    It is a long established fact that a reader will be distracted by It is a long established fact that a reader will be distracted by</p>
+                                <a class="read_more" href="about.html">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about_img">
+                                <figure><img class="img_responsive" src="static/images/about2.png" alt="#" /></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end about -->
+
+<!-- contact -->
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage text_align_center">
+                    <h2>Contact Us</h2>
+                </div>
+            </div>
+            <div class=" col-md-10 offset-md-1">
+                <form id="request" class="main_form">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input class="contactus" placeholder="Email" type="type" name="Email">
+                        </div>
+                        <div class="col-md-6">
+                            <input class="contactus" placeholder="Phone number" type="type" name="Phone number">
+                        </div>
+                        <div class="col-md-6">
+                            <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="send_btn">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end contact -->
+
+<!-- footer -->
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="logo_bottom" href="index.html">PeriBANK</a>
+                </div>
+                <div class="col-sm-6">
+              <div class="Informa conta ">
+                 <h3>Contact Us</h3>
+                 <ul>
+                    <li> <a href="Javascript:void(0) "> <i class="fa fa-map-marker " aria-hidden="true "></i> Location
+                       </a>
+                    </li>
+                    <li> <a href="Javascript:void(0) "><i class="fa fa-phone " aria-hidden="true "></i> Call +01 1234567890
+                       </a>
+                    </li>
+                    <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i> demo@gmail.com
+                       </a>
+                    </li>
+                 </ul>
+              </div>
+           </div>
+           <div class="col-sm-6 ">
+              <div class="Informa ">
+                 <h3>Newsletter</h3>
+                 <form class="newslatter_form ">
+                    <input class="ente " placeholder="Enter your email " type="text " name="Enter your email ">
+                    <button class="subs_btn ">Subscribe</button>
+                 </form>
+              </div>
+           </div>
+        </div>
+        <div class="copyright text_align_center ">
+           <div class="container ">
+              <div class="row ">
+                 <div class="col-md-12 ">
+                    <p>© 2023 All Rights Reserved. Design by Joana Lawer  <a href="https://html.design/ "> Peripheral Bank</a></p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+  </footer>
+  <!-- end footer -->
 {% endblock %}
