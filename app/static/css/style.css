@@ -357,99 +357,6 @@ loader
      max-width: 100%;
 }
 
-/** testimonial **/
-
-.testimonial {
-     margin-top: 90px;
-}
-
-.border_testi {
-     border: #fff solid 1px;
-     padding: 90px 0 142px 0;
-     margin: 0 40px;
-}
-
-.testimonial .titlepage {
-     padding-bottom: 60px;
-}
-
-.posi_in {
-     position: inherit;
-     padding: 0;
-}
-
-.testomoniam_text i img {
-     border-radius: 10%;
-}
-
-.testomoniam_text h3 {
-     margin-top: 24px;
-     font-size: 17px;
-     padding: 0;
-     font-weight: bold;
-     line-height: 20px;
-}
-
-.testomoniam_text span {
-     display: block;
-     color: #face34;
-     font-size: 17px;
-     padding: 2px 0 30px 0;
-     line-height: 20px;
-}
-
-.testomoniam_text p {
-     padding-top: 20px;
-     display: block;
-}
-
-#testimo .carousel-control-next,
-#testimo .carousel-control-prev {
-     display: none;
-}
-
-.testimonial .carousel-indicators {
-     display: block;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-wrap: wrap;
-     bottom: -52px;
-     right: 0;
-     left: inherit;
-}
-
-.testimonial .carousel-indicators li {
-     width: 23px;
-     height: 23px;
-     border-radius: 20px;
-     display: inline-block;
-     background-color: #face34;
-     cursor: pointer;
-}
-
-.testimonial .carousel-indicators .active {
-     background-color: #effafc;
-}
-
-
-/** end testimonial **/
-
-
-/** works **/
-
-.works {
-     padding: 80px 0 90px 0;
-}
-
-.works_vedio figure {
-     margin: 0;
-}
-
-
-/** end works **/
-
-
 /** contact section **/
 
 .main_form .contactus {
@@ -505,8 +412,6 @@ loader
      color: #5e687d;
      opacity: 1;
 }
-
-
 /** end contact section **/
 
 
