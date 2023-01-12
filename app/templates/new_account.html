@@ -8,7 +8,7 @@
 <!-- Navbar -->
     <!-- Image and text --> 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="{{ url_for('index')}}">
       <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">PeriBank
     </a>
     <!-- Menu section -->
@@ -18,13 +18,13 @@
     <div class="navbar-header collapse navbar-collapse" id="navbarNav">
       <ul class=" navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home </a>
+          <a class="nav-link" href="{{ url_for('index')}}">Home </a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">New Account<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{{ url_for('new_account')}}">New Account<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Customer Login </a>
+          <a class="nav-link" href="{{ url_for('login')}}">Customer Login </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
@@ -38,58 +38,49 @@
 {% block body %} 
 <!-- start form section -->
 <div id="top_section" class=" banner_main">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="row d_flex">
-                    <div class="col-md-6">
-                        <div class="con_img">
-                            <figure><img class="img_responsive" src="static/images/top_img.png" alt="#" /></figure>
-                        </div>
+            <div class="col-md-12 about_border">
+              <div class="titlepage text_align_center">
+                <h2>New Account</h2>
+              </div>
+                <div class="col-md-6 offset-md-3">
+                  <form>
+                    <div class="form-group">
+                        <label for="firtname">First Name:</label>
+                        <input type="text" class="form-control" id="firstname">
                     </div>
-                    <div class="col-md-6">
-                        <div class="bluid">
-                          <div class="titlepage text_align_left">
-                            <h2>New Account</h2>
-                        </div>
-                            <form>
-                                <div class="form-group">
-                                    <label for="firtname">First Name:</label>
-                                    <input type="text" class="form-control" id="firstname">
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastname">Last Name:</label>
-                                    <input type="text" class="form-control" id="lastname">
-                                </div>  
-                                <div class="form-group">
-                                  <label for="email">Email address:</label>
-                                  <input type="email" class="form-control" id="email">
-                                </div>
-                                <div class="form-group">
-                                  <label for="pwd">Password:</label>
-                                  <input type="password" class="form-control" id="pwd">
-                                </div>
-                                <div class="form-group">
-                                    <label for="pwd">Confirm Password:</label>
-                                    <input type="password" class="form-control" id="pwd">
-                                </div>
-                                <div class="form-group">
-                                    <label for="address">Address:</label>
-                                    <input type="text" class="form-control" id="email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number:</label>
-                                    <input type="number" class="form-control" id="phone">
-                                </div>
-                                <!-- <div class="checkbox">
-                                  <label class="form-check-label"><input type="checkbox"> Remember me</label>
-                                </div> -->
-                                <button type="submit" class="btn btn-outline-secondary"></a>
-                                    Submit</button>
-                              </form>
-                        </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" class="form-control" id="lastname">
+                    </div>  
+                    <div class="form-group">
+                      <label for="email">Email address:</label>
+                      <input type="email" class="form-control" id="email">
                     </div>
-                </div>              
+                    <div class="form-group">
+                      <label for="pwd">Password:</label>
+                      <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Confirm Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="number" class="form-control" id="phone">
+                    </div>
+                    <!-- <div class="checkbox">
+                      <label class="form-check-label"><input type="checkbox"> Remember me</label>
+                    </div> -->
+                    <button type="submit" class="btn btn-outline-secondary"></a>
+                        Submit</button>
+                  </form> 
+                </div>
             </div>
         </div>
     </div>
