@@ -281,6 +281,57 @@ loader
 }
 /** banner end **/
 
+/** wallet **/
+
+.wallet {
+     padding: 113px 30px 0 30px;
+}
+
+.wallet_box {
+     background: #fff;
+     margin-bottom: 30px;
+     transition: ease-in all 0.5s;
+     padding: 25px 15px 50px 15px;
+}
+
+.wallet_box h3 {
+     color: #0c0b0b;
+     font-size: 22px;
+     text-transform: uppercase;
+     transition: ease-in all 0.5s;
+     font-weight: bold;
+     line-height: 22px;
+     padding: 20px 0 20px 0;
+}
+
+.wallet_box p {
+     color: #191a1a;
+     font-size: 16px;
+     line-height: 28px;
+     transition: ease-in all 0.5s;
+}
+
+#wa_hover:hover.wallet_box {
+     background: #face34;
+     transition: ease-in all 0.5s;
+}
+
+#wa_hover:hover i img {
+     filter: invert();
+     transition: ease-in all 0.5s;
+}
+
+#wa_hover:hover.wallet_box h3 {
+     color: #fff;
+     transition: ease-in all 0.5s;
+}
+
+#wa_hover:hover.wallet_box p {
+     color: #fff;
+     transition: ease-in all 0.5s;
+}
+/** end wallet **/
+
 /** about **/
 .about {
      padding: 90px 0 60px 0;

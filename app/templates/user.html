@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Home</title> 
+<title>My Account</title> 
 {% endblock %}
 
 {% block navbar %} 
 <!-- Navbar -->
     <!-- Image and text --> 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{{url_for(index.html)}}">
+    <a class="navbar-brand" href="index.html">
       <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">PeriBank
     </a>
     <!-- Menu section -->
@@ -17,8 +17,8 @@
     </button>
     <div class="navbar-header collapse navbar-collapse" id="navbarNav">
       <ul class=" navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">New Account</a>
@@ -42,35 +42,35 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="titlepage text_align_center">
-                    <h2>My Wallets</h2>
+                    <h2>My Account</h2>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="images/wa1.svg" alt="#"/></i>
+                    <i><img src="static/images/wa1.svg" alt="#"/></i>
                     <h3>CASH BANK</h3>
                     <p>It is a long established fact that a reader will be distracted by </p>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="images/wa2.svg" alt="#"/></i>
+                    <i><img src="static/images/wa2.svg" alt="#"/></i>
                     <h3>DIGITAL BANK</h3>
                     <p>It is a long established fact that a reader will be distracted by </p>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="images/wa3.svg" alt="#"/></i>
+                    <i><img src="static/images/wa3.svg" alt="#"/></i>
                     <h3>CRYPTO BANK </h3>
                     <p>It is a long established fact that a reader will be distracted by </p>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="images/wa4.svg" alt="#"/></i>
+                    <i><img src="static/images/wa4.svg" alt="#"/></i>
                     <h3>STOCKS</h3>
                     <p>It is a long established fact that a reader will be distracted by </p>
                 </div>

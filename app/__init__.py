@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
@@ -20,9 +20,9 @@ def login():
 def user():
     return render_template('user.html')
 
-@app.route('/user')
-def user():
-    return render_template('user.html')
+@app.route('/cash_bank')
+def cash_bank():
+    return render_template('cash_bank.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
