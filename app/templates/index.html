@@ -16,20 +16,24 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-header collapse navbar-collapse" id="navbarNav">
-      <ul class=" navbar-nav">
+      <ul class="nav">
         <li class="nav-item active">
           <a class="nav-link" href="{{ url_for('index')}}">Home<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('new_account')}}">New Account</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('login')}}">Customer Login </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
         </li>
       </ul>
+    </div>
+    <div class="nav justify-content-end">
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('new_account')}}">New Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('login')}}">Customer Login </a>
+            </li>
+          </ul>
     </div>
 </nav>
 <!-- Navbar end -->
@@ -164,7 +168,7 @@
            <div class="container ">
               <div class="row ">
                  <div class="col-md-12 ">
-                    <p>© 2023 All Rights Reserved. Design by Joana Lawer  <a href="https://html.design/ "> Peripheral Bank</a></p>
+                    <p>© 2023 All Rights Reserved.  <a href="https://html.design/ "> Peripheral Bank</a></p>
                  </div>
               </div>
            </div>

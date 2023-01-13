@@ -1,5 +1,6 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, request, url_for, redirect
 from flask_bootstrap import Bootstrap
+from flask_login import login_manager
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -12,10 +13,16 @@ def index():
 def new_account():
     return render_template('new_account.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')
-
+    error = None
+    if request.method == 'POST':
+        if request.form['acc_number'] != '0123456789' or request.form['password'] != 'password':
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            return redirect(url_for('user'))
+    return render_template('login.html', error=error)
+  
 @app.route('/user')
 def user():
     return render_template('user.html')
