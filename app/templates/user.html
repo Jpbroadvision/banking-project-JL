@@ -21,15 +21,19 @@
           <a class="nav-link" href="{{ url_for('index')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('new_account')}}">New Account</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('login')}}">Customer Login </a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
         </li>
       </ul>
+    </div>
+    <div class="nav justify-content-end">
+        <ul class="nav">
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('new_account')}}">New Account</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('login')}}"> Logout </a>
+            </li>
+          </ul>
     </div>
 </nav>
 <!-- Navbar end -->
@@ -65,13 +69,6 @@
                 <div id="wa_hover" class="wallet_box text_align_center">
                     <i><img src="static/images/wa3.svg" alt="#"/></i>
                     <h3>CRYPTO BANK </h3>
-                    <p>It is a long established fact that a reader will be distracted by </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="static/images/wa4.svg" alt="#"/></i>
-                    <h3>STOCKS</h3>
                     <p>It is a long established fact that a reader will be distracted by </p>
                 </div>
             </div>
@@ -113,7 +110,7 @@
               </div>
            </div>
         </div>
-        <div class="copyright text_align_center ">
+        <!-- <div class="copyright text_align_center ">
            <div class="container ">
               <div class="row ">
                  <div class="col-md-12 ">
@@ -121,7 +118,7 @@
                  </div>
               </div>
            </div>
-        </div>
+        </div> -->
      </div>
   </div>
   </footer>
