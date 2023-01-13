@@ -4,7 +4,6 @@ from flask_login import LoginManager
 
 app = Flask(__name__)
 Bootstrap(app)
-
 login_manager = LoginManager()
 
 @app.route('/')
