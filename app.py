@@ -16,7 +16,7 @@ def new_account():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    error=error
+    error=''
     if request.method == 'POST':
         if request.form['acc_number'] != '0123456789' or request.form['password'] != 'password':
             error = 'Invalid Credentials. Please try again.'
@@ -32,5 +32,14 @@ def user():
 def cash_bank():
     return render_template('cash_bank.html')
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template('500.html'), 500    
+
 if __name__ == '__main__':
     app.run(debug=True)
+
