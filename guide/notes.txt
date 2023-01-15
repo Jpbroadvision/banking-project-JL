@@ -19,6 +19,6 @@ Close account
 
 #################################################################################################
 
-1. Create new accouunt || Login to old account
+1. Create new account || Login to old account
 
 2. Login should be able to manage forgot password

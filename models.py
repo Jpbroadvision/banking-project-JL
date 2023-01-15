@@ -1,13 +1,9 @@
 import os
-from .app import app
+from flask_login import LoginManager
+
 from flask_sqlalchemy import SQLAlchemy
 
-basedir = os.path.abspath(os.path.dirname(__file__))
-
-app.config['SQLALCHEMY_DATABASE_URI'] =\
-    'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-
+login_manager = LoginManager()
 db = SQLAlchemy()
 
 class Customer(db.Model):
@@ -18,6 +14,17 @@ class Customer(db.Model):
     email = db.Column(db.String(64), unique=True, index=True)
     password = db.Column(db.String(128))
     address = db.Column(db.String(128), unique=True, index=True)
-    phone = db.Column(db.Integer, unique=True, index=True)
+    phone_number = db.Column(db.Integer, unique=True, index=True)
     acc_number = db.Column(db.Integer, unique=True, index=True)
+
+    def __init__(self, **kwargs):
+        for property, value in kwargs.items():
+            if hasattr(value, '__iter__') and not isinstance(value, str):
+                value = value[0]
+            setattr(self, property, value)
+
+@login_manager.user_loader
+def user_loader(id):
+    return Customer.query.filter_by(id=id).first()
+
   

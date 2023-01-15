@@ -1,8 +1,17 @@
 from flask import Flask, render_template, request, url_for, redirect
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
+from flask_sqlalchemy import SQLAlchemy
+from init_db import configure_database, register_extensions
+
+from main.forms import NewAccount
+from models import Customer
+
+db = SQLAlchemy()
 
 app = Flask(__name__)
+configure_database(app)
+register_extensions(app)
 Bootstrap(app)
 login_manager = LoginManager()
 
@@ -13,6 +22,42 @@ def index():
 @app.route('/new_account')
 def new_account():
     return render_template('new_account.html')
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    form = NewAccount(request.POST)
+    error=''
+    if request.method == 'POST' and form.validate():
+        firstname = form.firstname.data
+        lastname = form.lastname.data
+        email = form.email.data
+        password = form.password.data
+        address = form.address.data
+        phone = form.phone_number.data
+        acc_number = ''
+        check = check_if_user_exist(email)
+        if check == False:
+            customer = {
+                "firstname" : firstname,
+                "lastname" : lastname,
+                "email" : email,
+                "password" : password,
+                "address" : address,
+                "phone" : phone,
+                "acc_number" : acc_number,
+            }
+            db.session.add(Customer(**customer))
+            db.session.commit()
+            return redirect(url_for('user'))
+        else:
+            return render_template('new_account.html', error=check)
+    return render_template('new_account.html', error=error)
+
+def check_if_user_exist(email):
+    user = Customer.query.filter_by(email=email).first()
+    if user:
+        return "Customer already exists!"
+    return False
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

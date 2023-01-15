@@ -1,18 +1,17 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, TextAreaField, SubmitField, ValidationError
 from wtforms.validators import DataRequired, Length, Email, EqualTo
-from ..models import Customer
 
 class NewAccount(FlaskForm):
-    firstname = StringField('Firstname', validators=[DataRequired(), Length(1, 64)])
+    firstname = StringField('First Name', validators=[DataRequired(), Length(1, 64)])
 
-    lastname = StringField('Lastname', validators=[DataRequired(), Length(1, 64)])
+    lastname = StringField('Last Name', validators=[DataRequired(), Length(1, 64)])
     
-    email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
+    email = StringField('Email Address', validators=[DataRequired(), Length(1, 64), Email()])
     
     password = PasswordField('Password', validators=[DataRequired(), EqualTo('password2', message='Passwords must match.')])
     
-    confirm_password = PasswordField('Confirm password', validators=[DataRequired()])
+    confirm_password = PasswordField('Confirm Password', validators=[DataRequired()])
 
     address = TextAreaField('Address', validators=[DataRequired(), Length(max=200)])
 

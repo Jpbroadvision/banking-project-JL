@@ -47,33 +47,46 @@
                 <div class="col-md-6 offset-md-3">
                   <form method="POST" action="">
                     <div class="form-group">
-                        <label for="firstname">First Name:</label>
-                        {{ form.Firstname }}
+                        <!-- <label for="firstname">First Name:</label> -->
+                        {{ form.firstname.label }}
+                        {{ form.firstname(class="form-control") }}
                         <!-- <input type="text" class="form-control" id="firstname"> -->
                     </div>
                     <div class="form-group">
-                        <label for="lastname">Last Name:</label>
-                        <input type="text" class="form-control" id="lastname">
+                        <!-- <label for="lastname">Last Name:</label> -->
+                        {{ form.lastname.label }}
+                        {{ form.lastname(class="form-control") }}
+                        <!-- <input type="text" class="form-control" id="lastname"> -->
                     </div>  
                     <div class="form-group">
-                      <label for="email">Email address:</label>
-                      <input type="email" class="form-control" id="email">
+                      <!-- <label for="email">Email Address:</label> -->
+                      {{ form.email.label }}                      
+                      {{ form.email(class="form-control") }}
+                      <!-- <input type="email" class="form-control" id="email"> -->
                     </div>
                     <div class="form-group">
-                      <label for="password">Password:</label>
-                      <input type="password" class="form-control" id="password">
+                      <!-- <label for="password">Password:</label> -->
+                      {{ form.password.label}}                      
+                      {{ form.password(class="form-control") }}
+                      <!-- <input type="password" class="form-control" id="password"> -->
                     </div>
                     <div class="form-group">
-                        <label for="confirm_password">Confirm Password:</label>
-                        <input type="password" class="form-control" id="confirm_password">
+                        <!-- <label for="confirm_password">Confirm Password:</label> -->
+                        {{ form.confirm_password.label }}                        
+                        {{ form.confirm_password(class="form-control") }}
+                        <!-- <input type="password" class="form-control" id="confirm_password"> -->
                     </div>
                     <div class="form-group">
-                        <label for="address">Address:</label>
-                        <input type="text" class="form-control" id="email">
+                        <!-- <label for="address">Address:</label> -->
+                        {{ form.address.label }}                        
+                        {{ form.address(class="form-control") }}
+                        <!-- <input type="text" class="form-control" id="email"> -->
                     </div>
                     <div class="form-group">
-                        <label for="phone_number">Phone Number:</label>
-                        <input type="number" class="form-control" id="phone">
+                        <!-- <label for="phone_number">Phone Number:</label> -->
+                        {{ form.phone_number.label }}                        
+                        {{ form.phone_number(class="form-control") }}
+                        <!-- <input type="number" class="form-control" id="phone"> -->
                     </div>
                     <!-- <div class="checkbox">
                       <label class="form-check-label"><input type="checkbox"> Remember me</label>
