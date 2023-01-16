@@ -9,7 +9,9 @@ from models import Customer
 
 db = SQLAlchemy()
 
-app = Flask(__name__)
+app = Flask(__name__)           # Instance of the flask web application
+app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///customers.sqlite3'
+
 configure_database(app)
 register_extensions(app)
 Bootstrap(app)
@@ -50,8 +52,8 @@ def register():
             db.session.commit()
             return redirect(url_for('user'))
         else:
-            return render_template('new_account.html', error=check)
-    return render_template('new_account.html', error=error)
+            return render_template('register.html', error=check)
+    return render_template('register.html', error=error)
 
 def check_if_user_exist(email):
     user = Customer.query.filter_by(email=email).first()

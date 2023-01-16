@@ -17,6 +17,16 @@ class Customer(db.Model):
     phone_number = db.Column(db.Integer, unique=True, index=True)
     acc_number = db.Column(db.Integer, unique=True, index=True)
 
+    # def __init__(self, firstname, lastname, email, password, address, phone_number, acc_number):
+    #     self.name = firstname
+    #     self.lastname = lastname
+    #     self.email = email
+    #     self.password = password
+    #     self.address = address
+    #     self.phone_number = phone_number
+    #     self.acc_number = acc_number
+       
+
     def __init__(self, **kwargs):
         for property, value in kwargs.items():
             if hasattr(value, '__iter__') and not isinstance(value, str):
