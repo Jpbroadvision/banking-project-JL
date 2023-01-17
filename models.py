@@ -5,9 +5,9 @@ from flask_sqlalchemy import SQLAlchemy
 login_manager = LoginManager()
 db = SQLAlchemy()
 
-class Customer(UserMixin, db.Model):
+class Customer(db.Model):
     __tablename__ = 'customers'
-    id = db.Column(db.Integer, primary_key = True)
+    id = db.Column("id", db.Integer, primary_key = True)
     firstname = db.Column(db.String(64), unique=True, index=True)
     lastname = db.Column(db.String(64), unique=True, index=True)
     email = db.Column(db.String(64), unique=True, index=True)
@@ -23,6 +23,6 @@ class Customer(UserMixin, db.Model):
                 value = value[0]
             setattr(self, property, value)
 
-@login_manager.user_loader
-def load_user(id):
-    return Customer.query.filter_by(id=int(id)).first()
+# @login_manager.user_loader
+# def load_user(id):
+#     return Customer.query.filter_by(id=int(id)).first()
