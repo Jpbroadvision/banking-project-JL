@@ -2,3 +2,4 @@ __pycache__
 guide/.~lock.guide.doc#
 app/__pycache__/__init__.cpython-310.pyc
 .vscode/launch.json
+instance/customers.sqlite3

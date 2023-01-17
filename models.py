@@ -1,12 +1,11 @@
 import os
-from flask_login import LoginManager
-
+from flask_login import LoginManager, UserMixin
 from flask_sqlalchemy import SQLAlchemy
 
 login_manager = LoginManager()
 db = SQLAlchemy()
 
-class Customer(db.Model):
+class Customer(UserMixin, db.Model):
     __tablename__ = 'customers'
     id = db.Column(db.Integer, primary_key = True)
     firstname = db.Column(db.String(64), unique=True, index=True)
@@ -17,15 +16,6 @@ class Customer(db.Model):
     phone_number = db.Column(db.Integer, unique=True, index=True)
     acc_number = db.Column(db.Integer, unique=True, index=True)
 
-    # def __init__(self, firstname, lastname, email, password, address, phone_number, acc_number):
-    #     self.name = firstname
-    #     self.lastname = lastname
-    #     self.email = email
-    #     self.password = password
-    #     self.address = address
-    #     self.phone_number = phone_number
-    #     self.acc_number = acc_number
-       
 
     def __init__(self, **kwargs):
         for property, value in kwargs.items():
@@ -34,7 +24,5 @@ class Customer(db.Model):
             setattr(self, property, value)
 
 @login_manager.user_loader
-def user_loader(id):
-    return Customer.query.filter_by(id=id).first()
-
-  
+def load_user(id):
+    return Customer.query.filter_by(id=int(id)).first()

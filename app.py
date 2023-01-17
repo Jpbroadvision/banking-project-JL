@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, request, url_for, redirect 
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
@@ -63,13 +63,14 @@ def check_if_user_exist(email):
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    
     error=''
     if request.method == 'POST':
-        if request.form['acc_number'] != '0123456789' or request.form['password'] != 'password':
-            error = 'Invalid Credentials. Please try again.'
-        else:
-            return redirect(url_for('user'))
-    return render_template('login.html', error=error)
+        # if request.form['acc_number'] ' or request.form['password'] != 'password':
+        #     error = 'Invalid Credentials. Please try again.'
+        # else:
+        #     return redirect(url_for('user'))
+        return render_template('login.html', error=error)
   
 @app.route('/user')
 def user():
@@ -88,5 +89,4 @@ def internal_server_error(e):
     return render_template('500.html'), 500    
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
+    app.run(debug=True)         #'debug-True' automatically detects changes and updtaes the application with no need to rerun.
