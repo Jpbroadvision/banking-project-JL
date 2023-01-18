@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect 
 from flask_bootstrap import Bootstrap
-from flask_login import LoginManager
+from flask_login import UserMixin, LoginManager, login_required,login_user, logout_user, current_user
 from flask_sqlalchemy import SQLAlchemy
 # from init_db import configure_database, register_extensions
 from forms import NewAccount
@@ -8,6 +8,7 @@ from models import Customer
 
 app = Flask(__name__)           # Instance of the flask web application
 app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///customers.sqlite3'
+
 db = SQLAlchemy(app)
 bootstrap = Bootstrap(app)
 login_manager = LoginManager(app)
@@ -18,17 +19,13 @@ login_manager = LoginManager(app)
 def index():
     return render_template('index.html')
 
-@app.route('/new_account')
-def new_account():
-    return render_template('new_account.html')
-
-@app.route('/register', method=["GET", "POST"])
+@app.route('/register', methods=["GET", "POST"])
 def register():
     form = NewAccount(request.POST)
-    # error=''
-    if request.method == 'POST' and form.validate():
+    if form.validate_on_submit():
         firstname = form.firstname.data
         lastname = form.lastname.data
+        username = form.username.data
         email = form.email.data
         password = form.password.data
         address = form.address.data
@@ -45,12 +42,12 @@ def register():
                 "phone" : phone,
                 "acc_number" : acc_number
             }
-            db.session.add(Customer(**customer))
+            db.session.add(customer)
             db.session.commit()
             return redirect(url_for('profile'))
         else:
-            return render_template('register.html')        #, error=check)
-    return render_template('register.html')               #, error=error)
+            return render_template('register.html')
+    return render_template('register.html', form=form)
 
 def check_if_user_exist(email):
     user = Customer.query.filter_by(email=email).first()
@@ -60,14 +57,13 @@ def check_if_user_exist(email):
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')#, error=error)
     # error=''
     # if request.method == 'POST':
     #     if request.form['acc_number'] or request.form['password'] != 'password':
     #         error = 'Invalid Credentials. Please try again.'
     #     else:
     #         return redirect(url_for('user'))
-    
+    return render_template('login.html')#, error=error)
   
 @app.route('/user')
 def user():

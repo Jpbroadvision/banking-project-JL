@@ -2,12 +2,16 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, TextAreaField, SubmitField, ValidationError
 from wtforms.validators import DataRequired, Length, Email, EqualTo
 
-class NewAccount(FlaskForm):
-    firstname = StringField('First Name', validators=[DataRequired(), Length(1, 64)])
+from models import Customer
 
-    lastname = StringField('Last Name', validators=[DataRequired(), Length(1, 64)])
+class NewAccount(FlaskForm):
+    firstname = StringField('First Name', validators=[DataRequired(), Length(30)])
+
+    lastname = StringField('Last Name', validators=[DataRequired(), Length(30)])
     
-    email = StringField('Email Address', validators=[DataRequired(), Length(1, 64), Email()])
+    username = StringField('Username', validators=[DataRequired(), Length(20)])
+
+    email = StringField('Email Address', validators=[DataRequired(), Length(35), Email()])
     
     password = PasswordField('Password', validators=[DataRequired(), EqualTo('password2', message='Passwords must match.')])
     
@@ -21,15 +25,15 @@ class NewAccount(FlaskForm):
 
     print(firstname, lastname, email, password, confirm_password, address, phone_number)
     
-    # def validate_email(self, field):
-    #     if Customer.query.filter_by(email=field.data).first():
-    #         raise ValidationError('Email already registered.')
+    def validate_email(self, field):
+        if Customer.query.filter_by(email=field.data).first():
+            raise ValidationError('Email already registered.')
     
-    # def validate_username(self, field):
-    #     if Customer.query.filter_by(username=field.data).first():
-    #         raise ValidationError('Username already in use.')
+    def validate_username(self, field):
+        if Customer.query.filter_by(username=field.data).first():
+            raise ValidationError('Username already in use.')
 
 class CustomerLogin(FlaskForm):
-    acc_number = StringField('Account Number', validators=[DataRequired(), Length(1, 32)])
+    username = StringField('Username', validators=[DataRequired(), Length(20)])
     
     password = PasswordField('Password', validators=[DataRequired()])
