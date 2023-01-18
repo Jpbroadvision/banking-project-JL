@@ -77,6 +77,14 @@ def profile():
 def cash_bank():
     return render_template('cash_bank.html')
 
+@app.route('/digital')
+def cash_bank():
+    return render_template('digital.html')
+
+@app.route('/crypto')
+def cash_bank():
+    return render_template('crypto.html')
+
 # @app.errorhandler(404)
 # def page_not_found(e):
 #     return render_template('404.html')
