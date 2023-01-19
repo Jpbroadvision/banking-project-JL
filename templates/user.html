@@ -9,89 +9,107 @@
 {% endblock%}
 
 {% block body %} 
-<!-- Accounts on PeriBANK -->
-<div class="wallet">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="titlepage">
-                    <h2>Welcome account_holder_name</h2>
-                    <br>
-                    <p>What would you like to do today</p>
+    <!-- wallet -->
+    <div class="wallet">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Welcome, Customer</h2>
+                        <br>
+                        <p>What would you like to do today?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="images/wa1.svg" alt="#"/></i>
+                        <h3>CASH BANK</h3>
+                        <p>It is a long established fact that a reader will be distracted by </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="images/wa2.svg" alt="#"/></i>
+                        <h3>DIGITAL BANK</h3>
+                        <p>It is a long established fact that a reader will be distracted by </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="images/wa3.svg" alt="#"/></i>
+                        <h3>CRYPTO BANK </h3>
+                        <p>It is a long established fact that a reader will be distracted by </p>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- end wallet -->
+
+    <!-- graf -->
+<div class="graf">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="static/images/wa1.svg" alt="#"/></i>
-                    <h3>CASH BANK</h3>
-                    <p>It is a long established fact that a reader will be distracted by </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="static/images/wa2.svg" alt="#"/></i>
-                    <h3>DIGITAL BANK</h3>
-                    <p>It is a long established fact that a reader will be distracted by </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="static/images/wa3.svg" alt="#"/></i>
-                    <h3>CRYPTO BANK </h3>
-                    <p>It is a long established fact that a reader will be distracted by </p>
+            <div class="col-md-12">
+                <div class="tab-content card  graf_content" id="myTabContentMD">
+                    <div class="tab-pane fade show active padi" id="tab1" role="tabpanel" aria-labelledby="home-tab-md">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4">
+                                <div class="usd text_align_center">
+                                    <h4><span>USD</span> 123456.09 <br> Last Price </h4>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="usd text_align_center">
+                                    <h4>USD 123456.09 <br> Daily Change </h4>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="usd text_align_center">
+                                    <h4>USD 123456.09 <br> 24 Hour Low </h4>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="usd text_align_center">
+                                    <h4>USD 123456.09 <br> 24 Hour High </h4>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="usd text_align_center">
+                                    <h4>USD 123456.09 <br> Today Open </h4>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="usd text_align_center">
+                                    <h4>BTC 09876 <br> 24 hour volume </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graf_bootom">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="growth text_align_center">
+                                        <figure>
+                                            <h3 class="h3tota">Total Growth</h3>
+                                            <img class="img_responsive" src="images/graf1.jpg" alt="#" />
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="growth text_align_center">
+                                        <h3>LiveTrades <span style="color: #face34;" class="pa_ri">USD 123456.09</span></h3>
+                                        <figure><img class="img_responsive" src="images/graf2.jpg" alt="#" /></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- end wallet -->
-<!-- footer -->
-<footer>
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a class="logo_bottom" href="{{ url_for('index')}}">PeriBANK</a>
-                </div>
-                <div class="col-sm-6">
-              <div class="Informa conta ">
-                 <h3>Contact Us</h3>
-                 <ul>
-                    <li> <a href="Javascript:void(0) "> <i class="fa fa-map-marker " aria-hidden="true "></i> Location
-                       </a>
-                    </li>
-                    <li> <a href="Javascript:void(0) "><i class="fa fa-phone " aria-hidden="true "></i> Call +01 1234567890
-                       </a>
-                    </li>
-                    <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i> demo@gmail.com
-                       </a>
-                    </li>
-                 </ul>
-              </div>
-           </div>
-           <div class="col-sm-6 ">
-              <div class="Informa ">
-                 <h3>Newsletter</h3>
-                 <form class="newslatter_form ">
-                    <input class="ente " placeholder="Enter your email " type="text " name="Enter your email ">
-                    <button class="subs_btn ">Subscribe</button>
-                 </form>
-              </div>
-           </div>
-        </div>
-        <!-- <div class="copyright text_align_center ">
-           <div class="container ">
-              <div class="row ">
-                 <div class="col-md-12 ">
-                    <p>© 2023 All Rights Reserved. Design by Joana Lawer  <a href="https://html.design/ "> Peripheral Bank</a></p>
-                 </div>
-              </div>
-           </div>
-        </div> -->
-     </div>
-  </div>
-  </footer>
-  <!-- end footer -->
+<!-- end graf -->
 {% endblock %}

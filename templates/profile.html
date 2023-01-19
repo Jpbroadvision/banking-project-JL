@@ -9,54 +9,93 @@
 {% endblock%}
 
 {{% block body %} 
-<!-- Edit profile section -->
-<div id="top_section" class=" banner_main">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 about_border">
-              <div class="titlepage">
-                <h2>Welcome account_holder_name</h2>
-                <p>Below are your account details to PeriBANK. You can edit and save changes here.<br>
-                    Make sure to copy your <em>Account Number: 0123456789ABCD</em> before exiting this page. 
-                    You will need it to login in other to manage your PeriBANK Accounts. <br>
-                </p>
+    <!-- start profile form -->
+    <div class="new_acc container">
+      <div class="col-md-12 ">
+          <div class="about_border">
+              <div class="contact">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="titlepage text_align_center">
+                                  <h2>New Account</h2>
+                              </div>
+                          </div>
+                          <div class=" col-md-10 offset-md-1">
+                              <form id="request" class="main_form">
+                                  <h2>Personal Details</h2>
+                                  <hr>
+                                  <form>
+                                      <div class="form-group">
+                                          <label for="acc_number">Account Number:</label>
+                                          <input type="number" class="form-control" id="acc_number">
+                                        </div>
+                                      <div class="form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" class="form-control" id="pwd">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="pwd">Password:</label>
+                                          <input type="password" class="form-control" id="pwd">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="pwd">Password:</label>
+                                          <input type="password" class="form-control" id="pwd">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="acc_number">Account Number:</label>
+                                          <input type="number" class="form-control" id="acc_number">
+                                        </div>
+                                      <div class="form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" class="form-control" id="pwd">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="pwd">Password:</label>
+                                          <input type="password" class="form-control" id="pwd">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="pwd">Password:</label>
+                                          <input type="password" class="form-control" id="pwd">
+                                      </div>
+                                      <hr>
+                                  <!--  -->
+                                  <h2>Bank Details</h2>
+                                      <hr>
+                                      <div class="form-group">
+                                          <label for="acc_number">Account Number:</label>
+                                          <input type="number" class="form-control" id="acc_number">
+                                      </div>
+                                  <div class="row">
+                                      <div class="col-lg-4 form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" class="form-control" id="pwd">
+                                      </div>
+                                      <div class="col-lg-4 form-group">
+                                          <label for="pwd">Password:</label>
+                                          <input type="password" class="form-control" id="pwd">
+                                      </div>
+                                      <div class="col-lg-4 form-group">
+                                          <label for="pwd">Password:</label>
+                                          <input type="password" class="form-control" id="pwd">
+                                      </div>
+                                  </div>
+                                  <hr>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <button class="send_btn">Update Changes</button>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <button class="send_btn">Cancel</button>
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
               </div>
-                <div class="col-md-6 offset-md-3">
-                  <form action="#" method="POST">
-                    <div class="form-group">
-                        {{ form.firstname.label }}
-                        {{ form.firstname(class="form-control") }}
-                    </div>
-                    <div class="form-group">
-                        {{ form.lastname.label }}
-                        {{ form.lastname(class="form-control") }}
-                    </div>  
-                    <div class="form-group">
-                      {{ form.email.label }}                      
-                      {{ form.email(class="form-control") }}
-                    </div>
-                    <div class="form-group">
-                      {{ form.password.label}}                      
-                      {{ form.password(class="form-control") }}
-                    </div>
-                    <div class="form-group">
-                        {{ form.address.label }}                        
-                        {{ form.address(class="form-control") }}
-                    </div>
-                    <div class="form-group">
-                        {{ form.phone_number.label }}                        
-                        {{ form.phone_number(class="form-control") }}
-                    </div>
-                    <!-- <div class="form-group">
-                        {{ form.acc_number.label }}                        
-                        {{ form.acc_number(class="form-control") }}
-                    </div> -->
-                    <button type="submit" class="btn btn-outline-secondary"></a>
-                        Save Changes</button>
-                  </form> 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end form section -->
+          </div>
+      </div>
+  </div>
+  <!-- end profile form -->
+{% endblock%}
