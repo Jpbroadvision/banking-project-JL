@@ -9,378 +9,204 @@
 {% endblock%}
 
 {% block body %} 
-<!-- Accounts on PeriBANK -->
-<div class="wallet">
-    <div class="container-fluid">
+    <!-- start currency rates -->
+    <div class="currency_rate">
         <div class="row">
-            <div class="col-md-12">
-                <div class="titlepage">
-                    <h2>Welcome account_holder_name</h2>
-                    <br>
-                    <p>What would you like to do today</p>
+            <div class="col-md-2 col-sm-4">
+                <div class="usd text_align_center">
+                    <h4><span>USD</span> 123456.09 <br> Last Price </h4>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="static/images/wa1.svg" alt="#"/></i>
-                    <h3>CASH BANK</h3>
-                    <p>It is a long established fact that a reader will be distracted by </p>
+            <div class="col-md-2 col-sm-4">
+                <div class="usd text_align_center">
+                    <h4>USD 123456.09 <br> Daily Change </h4>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-                <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="static/images/wa2.svg" alt="#"/></i>
-                    <h3>DIGITAL BANK</h3>
-                    <p>It is a long established fact that a reader will be distracted by </p>
+            <div class="col-md-2 col-sm-4">
+                <div class="usd text_align_center">
+                    <h4>USD 123456.09 <br> 24 Hour Low </h4>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-                <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="static/images/wa3.svg" alt="#"/></i>
-                    <h3>CRYPTO BANK </h3>
-                    <p>It is a long established fact that a reader will be distracted by </p>
+            <div class="col-md-2 col-sm-4">
+                <div class="usd text_align_center">
+                    <h4>USD 123456.09 <br> 24 Hour High </h4>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="usd text_align_center">
+                    <h4>USD 123456.09 <br> Today Open </h4>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="usd text_align_center">
+                    <h4>BTC 09876 <br> 24 hour volume </h4>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- end wallet -->
-<!-- graf -->
-<div class="graf">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="nav nav-tabs md-tabs graf_tab" id="myTabMD" role="tablist">
-                    <li>
-                        <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#tab1" role="tab" aria-controls="home-md" aria-selected="true">Bitcoin(BTC)</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#tab2" role="tab" aria-controls="profile-md" aria-selected="false">Bitcoin Cash(BCH)</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab3" role="tab" aria-controls="contact-md" aria-selected="false">Bitcoin Lite(LTC)</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab4" role="tab" aria-controls="contact-md" aria-selected="false">Bitcoin Ethereum(ETH)</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab5" role="tab" aria-controls="contact-md" aria-selected="false">Bitcoin Ripple(XRP)</a>
-                    </li>
-                </ul>
-                <div class="tab-content card  graf_content" id="myTabContentMD">
-                    <div class="tab-pane fade show active padi" id="tab1" role="tabpanel" aria-labelledby="home-tab-md">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-4">
-                                <div class="usd text_align_center">
-                                    <h4><span>USD</span> 123456.09 <br> Last Price </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> Daily Change </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> 24 Hour Low </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> 24 Hour High </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> Today Open </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <div class="usd text_align_center">
-                                    <h4>BTC 09876 <br> 24 hour volume </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="graf_bootom">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="growth text_align_center">
-                                        <figure>
-                                            <h3 class="h3tota">Total Growth</h3>
-                                            <img class="img_responsive" src="images/graf1.jpg" alt="#" />
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="growth text_align_center">
-                                        <h3>LiveTrades <span style="color: #face34;" class="pa_ri">USD 123456.09</span></h3>
-                                        <figure><img class="img_responsive" src="images/graf2.jpg" alt="#" /></figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade padi" id="tab2" role="tabpanel" aria-labelledby="profile-tab-md">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4><span>USD</span> 123456.09 <br> Last Price </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> Daily Change </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> 24 Hour Low </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> 24 Hour High </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> Today Open </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>BTC 09876 <br> 24 hour volume </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="graf_bootom">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="growth text_align_center">
-                                        <figure>
-                                            <h3 class="h3tota">Total Growth</h3>
-                                            <img class="img_responsive" src="images/graf1.jpg" alt="#" />
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="growth text_align_center">
-                                        <h3>LiveTrades <span style="color: #face34;" class="pa_ri">USD 123456.09</span></h3>
-                                        <figure><img class="img_responsive" src="images/graf2.jpg" alt="#" /></figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade padi" id="tab3" role="tabpanel" aria-labelledby="contact-tab-md">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4><span>USD</span> 123456.09 <br> Last Price </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> Daily Change </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> 24 Hour Low </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> 24 Hour High </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> Today Open </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>BTC 09876 <br> 24 hour volume </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="graf_bootom">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="growth text_align_center">
-                                        <figure>
-                                            <h3 class="h3tota">Total Growth</h3>
-                                            <img class="img_responsive" src="images/graf1.jpg" alt="#" />
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="growth text_align_center">
-                                        <h3>LiveTrades <span style="color: #face34;" class="pa_ri">USD 123456.09</span></h3>
-                                        <figure><img class="img_responsive" src="images/graf2.jpg" alt="#" /></figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade padi" id="tab4" role="tabpanel" aria-labelledby="contact-tab-md">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4><span>USD</span> 123456.09 <br> Last Price </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> Daily Change </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> 24 Hour Low </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> 24 Hour High </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> Today Open </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>BTC 09876 <br> 24 hour volume </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="graf_bootom">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="growth text_align_center">
-                                        <figure>
-                                            <h3 class="h3tota">Total Growth</h3>
-                                            <img class="img_responsive" src="images/graf1.jpg" alt="#" />
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="growth text_align_center">
-                                        <h3>LiveTrades <span style="color: #face34;" class="pa_ri">USD 123456.09</span></h3>
-                                        <figure><img class="img_responsive" src="images/graf2.jpg" alt="#" /></figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade padi" id="tab5" role="tabpanel" aria-labelledby="contact-tab-md">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4><span>USD</span> 123456.09 <br> Last Price </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> Daily Change </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> 24 Hour Low </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> 24 Hour High </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>USD 123456.09 <br> Today Open </h4>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="usd text_align_center">
-                                    <h4>BTC 09876 <br> 24 hour volume </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="graf_bootom">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="growth text_align_center">
-                                        <figure>
-                                            <h3 class="h3tota">Total Growth</h3>
-                                            <img class="img_responsive" src="images/graf1.jpg" alt="#" />
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="growth text_align_center">
-                                        <h3>LiveTrades <span style="color: #face34;" class="pa_ri">USD 123456.09</span></h3>
-                                        <figure><img class="img_responsive" src="images/graf2.jpg" alt="#" /></figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <!-- end currency rates -->
+        
+    <!-- Accounts on PeriBANK -->
+    <div class="wallet">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <p>What transaction would you like to do today?</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- end graf -->
-<!-- footer -->
-<footer>
-    <div class="footer">
+    <!-- end wallet -->
+
+    <!-- graf -->
+    <div class="graf">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a class="logo_bottom" href="{{ url_for('index')}}">PeriBANK</a>
+                    <ul class="nav nav-tabs md-tabs graf_tab" id="myTabMD" role="tablist">
+                        <li>
+                            <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#tab1" role="tab" aria-controls="home-md" aria-selected="true">View Balance</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#tab2" role="tab" aria-controls="profile-md" aria-selected="false">Deposit</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab3" role="tab" aria-controls="contact-md" aria-selected="false">Withdraw</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab4" role="tab" aria-controls="contact-md" aria-selected="false">Transfer</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab5" role="tab" aria-controls="contact-md" aria-selected="false">Request Statement</a>
+                        </li>
+                    </ul>
+                    <!-- View Balance -->
+                    <div class="tab-content card  graf_content" id="myTabContentMD">
+                        <div class="tab-pane fade show active padi" id="tab1" role="tabpanel" aria-labelledby="home-tab-md">
+                            <div class=" col-md-10 offset-md-1">
+                                <form id="request" class="main_form">
+                                    <div class="row">
+                                        <div class="col-md-6 ">
+                                            <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input class="contactus" placeholder="Email" type="type" name="Email">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input class="contactus" placeholder="Phone number" type="type" name="Phone number">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="send_btn">Send</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    <!-- Deposit -->
+                    <div class="tab-pane fade padi" id="tab2" role="tabpanel" aria-labelledby="profile-tab-md">
+                        <div class=" col-md-10 offset-md-1">
+                            <form id="request" class="main_form">
+                                <div class="row">
+                                    <div class="col-md-6 ">
+                                        <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="contactus" placeholder="Email" type="type" name="Email">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="contactus" placeholder="Phone number" type="type" name="Phone number">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button class="send_btn">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Withdraw -->
+                    <div class="tab-pane fade padi" id="tab3" role="tabpanel" aria-labelledby="contact-tab-md">
+                        <div class=" col-md-10 offset-md-1">
+                            <form id="request" class="main_form">
+                                <div class="row">
+                                    <div class="col-md-6 ">
+                                        <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="contactus" placeholder="Email" type="type" name="Email">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="contactus" placeholder="Phone number" type="type" name="Phone number">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button class="send_btn">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Transfer -->
+                    <div class="tab-pane fade padi" id="tab4" role="tabpanel" aria-labelledby="contact-tab-md">
+                        <div class=" col-md-10 offset-md-1">
+                            <form id="request" class="main_form">
+                                <div class="row">
+                                    <div class="col-md-6 ">
+                                        <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="contactus" placeholder="Email" type="type" name="Email">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="contactus" placeholder="Phone number" type="type" name="Phone number">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button class="send_btn">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>    
+                    <!-- Request Statement -->
+                    <div class="tab-pane fade padi" id="tab5" role="tabpanel" aria-labelledby="contact-tab-md">
+                        <div class=" col-md-10 offset-md-1">
+                            <form id="request" class="main_form">
+                                <div class="row">
+                                    <div class="col-md-6 ">
+                                        <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="contactus" placeholder="Email" type="type" name="Email">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="contactus" placeholder="Phone number" type="type" name="Phone number">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button class="send_btn">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <div class="col-sm-6">
-              <div class="Informa conta ">
-                 <h3>Contact Us</h3>
-                 <ul>
-                    <li> <a href="Javascript:void(0) "> <i class="fa fa-map-marker " aria-hidden="true "></i> Location
-                       </a>
-                    </li>
-                    <li> <a href="Javascript:void(0) "><i class="fa fa-phone " aria-hidden="true "></i> Call +01 1234567890
-                       </a>
-                    </li>
-                    <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i> demo@gmail.com
-                       </a>
-                    </li>
-                 </ul>
-              </div>
-           </div>
-           <div class="col-sm-6 ">
-              <div class="Informa ">
-                 <h3>Newsletter</h3>
-                 <form class="newslatter_form ">
-                    <input class="ente " placeholder="Enter your email " type="text " name="Enter your email ">
-                    <button class="subs_btn ">Subscribe</button>
-                 </form>
-              </div>
-           </div>
+            </div>
         </div>
-        <!-- <div class="copyright text_align_center ">
-           <div class="container ">
-              <div class="row ">
-                 <div class="col-md-12 ">
-                    <p>© 2023 All Rights Reserved. Design by Joana Lawer  <a href="https://html.design/ "> Peripheral Bank</a></p>
-                 </div>
-              </div>
-           </div>
-        </div> -->
-     </div>
-  </div>
-  </footer>
-  <!-- end footer -->
+    </div>
+<!-- end graf -->
 {% endblock %}
