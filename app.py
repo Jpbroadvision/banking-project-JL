@@ -1,19 +1,28 @@
+import os
 from flask import Flask, render_template, request, url_for, redirect 
-from flask_bootstrap import Bootstrap
-from flask_login import UserMixin, LoginManager, login_required,login_user, logout_user, current_user
+# from flask_bootstrap import Bootstrap
+from flask_login import LoginManager, login_required,login_user, logout_user, current_user
 from flask_sqlalchemy import SQLAlchemy
-# from init_db import configure_database, register_extensions
-from forms import NewAccount
+# from config import Config
+# from forms import NewAccount
+from init_db import configure_database
 from models import Customer
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 app = Flask(__name__)           # Instance of the flask web application
-app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///customers.sqlite3'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+ os.path.join(basedir, 'test_customers.sqlite3')
+app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
+
+# app.config.from_object(Config)
+configure_database(app)
 
 db = SQLAlchemy(app)
-bootstrap = Bootstrap(app)
-login_manager = LoginManager(app)
-# configure_database(app)
-# register_extensions(app)
+# bootstrap = Bootstrap(app)
+login_manager = LoginManager()
+# login_manager = LoginManager(app)
+login_manager.init_app(app)
 
 @app.route('/')
 def index():
@@ -21,11 +30,13 @@ def index():
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
-    form = NewAccount(request.POST)
+    form = request.form
+
+    # form = NewAccount(request.POST)
     if form.validate_on_submit():
         firstname = form.firstname.data
+        othername = form.username.data
         lastname = form.lastname.data
-        username = form.username.data
         email = form.email.data
         password = form.password.data
         address = form.address.data
@@ -57,13 +68,7 @@ def check_if_user_exist(email):
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    # error=''
-    # if request.method == 'POST':
-    #     if request.form['acc_number'] or request.form['password'] != 'password':
-    #         error = 'Invalid Credentials. Please try again.'
-    #     else:
-    #         return redirect(url_for('user'))
-    return render_template('login.html')#, error=error)
+    return render_template('login.html')
   
 @app.route('/user')
 def user():
@@ -78,20 +83,12 @@ def cash_bank():
     return render_template('cash_bank.html')
 
 @app.route('/digital')
-def cash_bank():
+def digital():
     return render_template('digital.html')
 
 @app.route('/crypto')
-def cash_bank():
+def crypto():
     return render_template('crypto.html')
-
-# @app.errorhandler(404)
-# def page_not_found(e):
-#     return render_template('404.html')
-
-# @app.errorhandler(500)
-# def internal_server_error(e):
-#     return render_template('500.html') 
 
 if __name__ == '__main__':
     app.run(debug=True)         #debug-True' automatically detects changes and updtaes the application with no need to rerun.
