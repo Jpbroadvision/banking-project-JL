@@ -3,3 +3,5 @@ guide/
 app/__pycache__/__init__.cpython-310.pyc
 .vscode/launch.json
 instance/
+.env
+test_customers.sqlite3
