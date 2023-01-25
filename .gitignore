@@ -6,3 +6,4 @@ instance/
 .env
 test_customers.sqlite3
 /venv
+customers.sqlite3
