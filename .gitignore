@@ -5,3 +5,4 @@ app/__pycache__/__init__.cpython-310.pyc
 instance/
 .env
 test_customers.sqlite3
+/venv
