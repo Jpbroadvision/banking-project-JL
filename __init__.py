@@ -34,7 +34,7 @@ def register_blueprints(app) -> None:
 def create_app(config):
     app = Flask(__name__)           # Instance of the flask web application
     app.config.from_object(config)
-    configure_database(app)
     register_extensions(app)
     register_blueprints(app)
+    configure_database(app)
     return app
